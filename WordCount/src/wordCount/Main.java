@@ -146,7 +146,7 @@ public class Main {
 
 		String content = getFileContent(file);
 		if (c) {
-			output.println(inputPath + ", 字符数: " + content.length());
+			output.println(inputPath + ", 字符数: " + (content.length() - lineNumber + 1));
 		}
 		if (w) {
 			String[] words = content.split(",| |\n|\t"); // 单词分隔符
@@ -155,7 +155,7 @@ public class Main {
 				// 单词计数，排除双分隔符产生的空字符串
 				if (!(words[i].equals("") || words[i] == null)) {
 					number++;
-					if (e) {
+					if (e) { // 停用词
 						for (int j = 0; j < stopWords.length; j++) {
 							if (words[i].equals(stopWords[j])) {
 								number--;
