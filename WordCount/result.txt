@@ -1,4 +1,0 @@
-file.txt, 字符数: 44
-file.txt, 单词数: 8
-file.txt, 行数: 3
-file.txt, 代码行/空行/注释行: 3/0/0
